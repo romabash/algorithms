@@ -11,5 +11,6 @@ public class MainApp {
 
         int idx = Search.linearSearch(list, item);
         System.out.println("Index of " + item + " is at index " + idx);
+
     }
 }
