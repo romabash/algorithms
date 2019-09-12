@@ -8,9 +8,9 @@ public class Search {
 
     /**
      * Uses Linear Search to check if the element is present the List
-     * @param array List to search from
+     * @param array Array to search from
      * @param x Element to search for
-     * @return Returns index of the element if present in the List, return -1 if not in the List
+     * @return Returns index of the element if present in the Array, return -1 if not in the Array
      */
     public static int linearSearch(int[] array, int x){
 
@@ -23,6 +23,12 @@ public class Search {
         return -1;
     }
 
+    /**
+     * Uses Bianry Search to check if the element is present the List
+     * @param array Sorted Array to search from
+     * @param x Element to search for
+     * @return Returns index of the element if present in the Array, return -1 if not in the Array
+     */
     public static int binarySearch(int[] array, int x){
 
         int start = 0;
