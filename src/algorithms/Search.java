@@ -7,7 +7,7 @@ package algorithms;
 public class Search {
 
     /**
-     * Uses Linear Search to check if the element is present the List
+     * Uses Linear Search to check if the element is present the Array
      * @param array Array to search from
      * @param x Element to search for
      * @return Returns index of the element if present in the Array, return -1 if not in the Array
@@ -24,7 +24,7 @@ public class Search {
     }
 
     /**
-     * Uses Bianry Search to check if the element is present the List
+     * Uses Bianry Search to check if the element is present the Array
      * @param array Sorted Array to search from
      * @param x Element to search for
      * @return Returns index of the element if present in the Array, return -1 if not in the Array
@@ -32,21 +32,45 @@ public class Search {
     public static int binarySearch(int[] array, int x){
 
         int start = 0;
-        int end = array.length -1;
+        int end = array.length - 1;
 
         while(start <= end){
-            int middle = start + ((end - start) / 2);
+            int mid = (start + end) / 2;
             // If element at given location is equals to x, return its index
-            if (array[middle] == x){
-                return middle;
+            if (array[mid] == x){
+                return mid;
             }
 
-            if (x < array[middle]){
-                end = middle - 1;
-            }else{
-                start = middle + 1;
+            if (x < array[mid]){
+                end = mid - 1;
+            } else{
+                start = mid + 1;
             }
         }
         return -1;
+    }
+
+    /**
+     * Uses Recursive Bianry Search to check if the element is present the Array
+     * @param array Sorted Array to search from
+     * @param x Element to search for
+     * @param start Start of the Array
+     * @param end End of the Array
+     * @return Returns index of the element if present in the Array, return -1 if not in the Array
+     */
+    public static int binarySearch(int[] array, int x, int start, int end){
+
+        if (start > end) return -1;
+
+        int mid = (start + end) / 2;
+        if (array[mid] == x){
+            return mid;
+        } else if (x < array[mid]){
+            end = mid - 1;
+            return binarySearch(array, x, start, end);
+        } else{
+            start = mid + 1;
+            return binarySearch(array, x, start, end);
+        }
     }
 }
