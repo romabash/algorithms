@@ -8,6 +8,8 @@ public class Search {
 
     /**
      * Uses Linear Search to check if the element is present the Array
+     * Time Complexity - Best: O(1), Average: O(n), Worst: O(n)
+     * Space Complexity - Worst: O(1)
      * @param array Array to search from
      * @param x Element to search for
      * @return Returns index of the element if present in the Array, return -1 if not in the Array
@@ -25,6 +27,8 @@ public class Search {
 
     /**
      * Uses Binary Search to check if the element is present the Array
+     * Time Complexity - Best: O(1), Average: O(log n), Worst: O(log n)
+     * Space Complexity - Worst: O(1)
      * @param array Sorted Array to search from
      * @param x Element to search for
      * @return Returns index of the element if present in the Array, return -1 if not in the Array
@@ -52,6 +56,8 @@ public class Search {
 
     /**
      * Uses Recursive Binary Search to check if the element is present the Array
+     * Time Complexity - Best: O(1), Average: O(log n), Worst: O(log n)
+     * Space Complexity - Worst: O(1)
      * @param array Sorted Array to search from
      * @param x Element to search for
      * @param start Start of the Array

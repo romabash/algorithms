@@ -8,6 +8,8 @@ public class Sort {
 
     /**
      * Uses Bubble Sort to sort an Array
+     * Time Complexity - Best: O(n), Average: O(n^2), Worst: O(n^2)
+     * Space Complexity - Worst: O(1)
      * @param array Array to sort
      * @return Returns sorted array
      */
