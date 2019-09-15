@@ -24,7 +24,7 @@ public class Search {
     }
 
     /**
-     * Uses Bianry Search to check if the element is present the Array
+     * Uses Binary Search to check if the element is present the Array
      * @param array Sorted Array to search from
      * @param x Element to search for
      * @return Returns index of the element if present in the Array, return -1 if not in the Array
@@ -51,7 +51,7 @@ public class Search {
     }
 
     /**
-     * Uses Recursive Bianry Search to check if the element is present the Array
+     * Uses Recursive Binary Search to check if the element is present the Array
      * @param array Sorted Array to search from
      * @param x Element to search for
      * @param start Start of the Array
