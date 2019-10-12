@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.List;
+
 /**
  * Searching algorithms
  * @author Roma
@@ -19,6 +21,27 @@ public class Search {
         int size = array.length;
         for (int i = 0; i < size; i++) {
             if (array[i] == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Uses Linear Search to check if the element is present the Generic List of type T
+     * Time Complexity - Best: O(1), Average: O(n), Worst: O(n)
+     * Space Complexity - Worst: O(1)
+     * @param list List<T> to search from
+     * @param x Element to search for of type T
+     * @return Returns index of the element if present in the Array, return -1 if not in the Array
+     */
+    public static <T> int linearSearch(List<T> list, T x){
+
+        int size = list.size();
+        for (int i = 0; i < size; i++)
+        {
+            if (x.equals(list.get(i)))
+            {
                 return i;
             }
         }
